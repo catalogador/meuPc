@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu PC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav> 
+                <div class="logo-name">
+                    <h3>PC: Weslley</h3>
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/weslleypolo/">Linkedin</a></li>
+                        <li><a href="https://github.com/catalogador">Github</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Em Branco</a></li>
+                    </ul>
+                </div>
+        </nav>
+
+        <div class="information">
+            <div class="overlay">
+
+            </div>
+            <img src="images/pc.png" class="pc">
+
+            <div id="circle">
+                <div class="feature one">
+                    <img src="/images/video.png">
+                    <div> 
+                        <h1>
+                            Video
+                        </h1>
+                        <p>AMD RX580 8G, MILLSE </p>
+                    </div>
+                    
+                </div>
+                <div class="feature two">
+                    <img src="/images/font.png">
+                    <div> 
+                        <h1>
+                            Fonte
+                        </h1>
+                        <p>CORSAIR, 550W</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="/images/ram.png">
+                    <div> 
+                        <h1>
+                            Ram
+                        </h1>
+                        <p>16GB, X99</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="/images/nucleo.png">
+                    <div> 
+                        <h1>
+                            Processador
+                        </h1>
+                        <p>Intel Xeon 2640v3, Familia Xeon</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="controls">
+            <img src="images/next.png" id="up">
+            <h3>Peças</h3>
+            <img src="images/next.png" id="down">
+        </div>
+    </div>
+
+
+    <script>
+        var circle = document.getElementById("circle");
+        var up = document.getElementById("up");
+        var down = document.getElementById("down");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        up.onclick = function(){
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        down.onclick = function(){
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+</body>
+</html>
